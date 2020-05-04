@@ -1,0 +1,81 @@
+﻿<Window x:Class="EchoServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EchoServer"
+        mc:Ignorable="d"
+        Title="EchoServer" Height="450" Width="400">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button Content="Disconnect" Margin="5,5,5,5" Width="100"/>
+        </StackPanel>
+        <TabControl DockPanel.Dock="Bottom">
+            
+            <!--Textタブ-->
+            <TabItem Header="Text">
+                <ListBox DockPanel.Dock="Bottom" Margin="2,2,2,2" ItemsSource="{Binding MessageList}"/>
+            </TabItem>
+            
+            <!--TCP1タブ-->
+            <TabItem Header="TCP1">
+                <StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Set Massage Error"/>
+                        <CheckBox Grid.Row="0" Grid.Column="1" Content="Enabled" VerticalAlignment="Center"/>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Get Massage Error"/>
+                        <CheckBox Grid.Row="1" Grid.Column="1" Content="Enabled" VerticalAlignment="Center"/>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            
+            <!--UDP1タブ-->
+            <TabItem Header="UDP1">
+                <StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Alarm A-1"/>
+                        <ComboBox Grid.Row="0" Grid.Column="1" 
+                                  SelectedItem="{Binding UdpAlarmA1}"
+                                  ItemsSource="{Binding UdpAlarmList}" DisplayMemberPath="Info" SelectedIndex="0"/>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Alarm A-2"/>
+                        <ComboBox Grid.Row="1" Grid.Column="1"
+                                  SelectedItem="{Binding UdpAlarmA2}"
+                                  ItemsSource="{Binding UdpAlarmList}" DisplayMemberPath="Info" SelectedIndex="0"/>
+                        <Separator Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                        <Label Grid.Row="3" Grid.Column="0" Content="Alarm B-1"/>
+                        <ComboBox Grid.Row="3" Grid.Column="1"
+                                  SelectedItem="{Binding UdpAlarmB1}"
+                                  ItemsSource="{Binding UdpAlarmList}" DisplayMemberPath="Info" SelectedIndex="0"/>
+                        <Label Grid.Row="4" Grid.Column="0" Content="Alarm B-2"/>
+                        <ComboBox Grid.Row="4" Grid.Column="1"
+                                  SelectedItem="{Binding UdpAlarmB2}"
+                                  ItemsSource="{Binding UdpAlarmList}" DisplayMemberPath="Info" SelectedIndex="0"/>
+
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            
+        </TabControl>
+    </DockPanel>
+
+</Window>
