@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SampleUiGallery.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleUiGallery"
+    xmlns:view="clr-namespace:SampleUiGallery.Views.View"
+    xmlns:layout="clr-namespace:SampleUiGallery.Views.Layout"
+    Shell.FlyoutBehavior="Flyout"
+    Title="SampleUiGallery">
+
+    <FlyoutItem Title="Layouts">
+        <ShellContent
+        Title="VerticalStackLayout"
+        ContentTemplate="{DataTemplate layout:VerticalStackLayoutPage}" />
+        <ShellContent
+        Title="HorizontalStackLayout"
+        ContentTemplate="{DataTemplate layout:HorizontalStackLayoutPage}" />
+        <ShellContent
+        Title="StackLayout"
+        ContentTemplate="{DataTemplate layout:StackLayoutPage}" />
+        <ShellContent
+        Title="AbsoluteLayout"
+        ContentTemplate="{DataTemplate layout:AbsoluteLayoutPage}" />
+        <ShellContent
+        Title="BindableLayout"
+        ContentTemplate="{DataTemplate layout:BindableLayoutPage}" />
+        <ShellContent
+        Title="FlexLayout"
+        ContentTemplate="{DataTemplate layout:FlexLayoutPage}" />
+        <ShellContent
+        Title="Grid"
+        ContentTemplate="{DataTemplate layout:GridPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="View">
+        <ShellContent
+            Title="Control"
+            ContentTemplate="{DataTemplate view:ControlPage}" />
+        <ShellContent
+            Title="Shape"
+            ContentTemplate="{DataTemplate view:ShapePage}" />
+    </FlyoutItem>
+</Shell>
