@@ -9,13 +9,13 @@ public partial class StackLayoutPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-		if(stack.Orientation == StackOrientation.Vertical)
+		if(Stack.Orientation == StackOrientation.Vertical)
 		{
-            stack.Orientation = StackOrientation.Horizontal;
+            Stack.Orientation = StackOrientation.Horizontal;
         }
 		else
 		{
-			stack.Orientation = StackOrientation.Vertical;
+			Stack.Orientation = StackOrientation.Vertical;
 		}
     }
 }

@@ -4,9 +4,9 @@
              x:Class="SampleUiGallery.Views.Layout.AbsoluteLayoutPage"
              Title="AbsoluteLayoutPage">
     <AbsoluteLayout Margin="5">
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
+        <BoxView Color="Silver" AbsoluteLayout.LayoutBounds="0, 10, 200, 5"/>
+        <BoxView Color="Silver" AbsoluteLayout.LayoutBounds="0, 20, 200, 5"/>
+        <BoxView Color="Silver" AbsoluteLayout.LayoutBounds="10, 0, 5, 65"/>
+        <BoxView Color="Silver" AbsoluteLayout.LayoutBounds="20, 0, 5, 65"/>
     </AbsoluteLayout>
 </ContentPage>

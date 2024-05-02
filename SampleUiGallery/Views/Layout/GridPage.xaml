@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleUiGallery.Views.Layout.GridPage"
              Title="GridPage">
-    <Grid Margin="5">
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
+    <Grid
+        Margin="5" RowSpacing="5" ColumnSpacing="5"
+        RowDefinitions="Auto, Auto, *"
+        ColumnDefinitions="Auto, Auto, *">
+        <Button Grid.Row="0" Grid.Column="0" Text="View Area"/>
+        <Button Grid.Row="0" Grid.Column="1" Text="View Area"/>
+        <Button Grid.Row="0" Grid.Column="2" Text="View Area"/>
+        <Button Grid.Row="1" Grid.Column="0" Text="View Area"/>
+        <Button Grid.Row="1" Grid.Column="1" Text="View Area"/>
+        <Button Grid.Row="1" Grid.Column="2" Text="View Area"/>
+        <Button Grid.Row="2" Grid.Column="0" Text="View Area"/>
+        <Button Grid.Row="2" Grid.Column="1" Text="View Area"/>
+        <Button Grid.Row="2" Grid.Column="2" Text="View Area"/>
     </Grid>
 </ContentPage>

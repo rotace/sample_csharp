@@ -3,10 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleUiGallery.Views.Layout.FlexLayoutPage"
              Title="FlexLayoutPage">
-    <FlexLayout Margin="5">
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
-        <Button Text="View Area"/>
+    <FlexLayout Margin="5" Wrap="Wrap" JustifyContent="Start">
+        <BoxView Color="Red" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="Blue" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="Green" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="Yellow" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="Pink" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="Magenta" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="Orange" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="Cyan" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkBlue" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkCyan" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkGoldenrod" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkGray" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkGreen" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkKhaki" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkMagenta" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkOliveGreen" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkOrange" WidthRequest="50" HeightRequest="50"/>
+        <BoxView Color="DarkOrchid" WidthRequest="50" HeightRequest="50"/>
     </FlexLayout>
 </ContentPage>
