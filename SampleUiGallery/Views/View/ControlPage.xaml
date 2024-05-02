@@ -3,10 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleUiGallery.Views.View.ControlPage"
              Title="ControlPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <HorizontalStackLayout Margin="5" Spacing="5">
+        <VerticalStackLayout  Margin="5" Spacing="5">
+            <Button Text="Button"/>
+            <CheckBox/>
+            <Entry/>
+            <Editor/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout  Margin="5" Spacing="5">
+            <Switch/>
+            <Slider/>
+            <Stepper/>
+            <RadioButton/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout  Margin="5" Spacing="5">
+            <Picker/>
+            <DatePicker/>
+            <TimePicker/>
+            <ProgressBar Progress="0.3"/>
+        </VerticalStackLayout>
+
+    </HorizontalStackLayout>
 </ContentPage>

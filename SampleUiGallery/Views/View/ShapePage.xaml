@@ -3,10 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleUiGallery.Views.View.ShapePage"
              Title="ShapePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid
+        Margin="5" RowSpacing="5" ColumnSpacing="5"
+        RowDefinitions="Auto, Auto, Auto, *"
+        ColumnDefinitions="Auto, Auto, Auto, *">
+        <Rectangle
+            Fill="Green"
+            Stroke="Red"
+            StrokeThickness="3"
+            RadiusX="10"
+            RadiusY="10"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Start"
+            Grid.Row="0" Grid.Column="0"/>
+        <RoundRectangle
+            Fill="Green"
+            Stroke="Red"
+            StrokeThickness="3"
+            CornerRadius="20"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Start"
+            Grid.Row="0" Grid.Column="1"/>
+        <Polygon
+            Points="40,10 70,80 10,50"
+            Fill="Green"
+            Stroke="Red"
+            StrokeThickness="5"
+            Grid.Row="0" Grid.Column="2"/>
+        <Line
+            Stroke="Red"
+            X1="40"
+            Y1="0"
+            X2="0"
+            Y2="120"
+            Grid.Row="1" Grid.Column="0"/>
+        <Path
+            Data="M 10,10 L 50,50 50,25Z"
+            Stroke="Red"
+            Aspect="Uniform"
+            HorizontalOptions="Start"
+            Grid.Row="1" Grid.Column="1"/>
+        <Polyline
+            Points="0,0 10,30 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
+            Stroke="Red"
+            StrokeThickness="2"
+            StrokeDashArray="1,1"
+            StrokeDashOffset="6"
+            Grid.Row="1" Grid.Column="2"/>
+        <Ellipse
+            Fill="Green"
+            WidthRequest="150"
+            HeightRequest="50"
+            HorizontalOptions="Start"
+            Grid.Row="2" Grid.Column="0"/>
+        <Rectangle
+            Fill="Green"
+            Stroke="Red"
+            WidthRequest="50"
+            HeightRequest="50"
+            Grid.Row="2" Grid.Column="1"/>
+        <Rectangle
+            Fill="Green"
+            Stroke="Red"
+            WidthRequest="50"
+            HeightRequest="50"
+            Grid.Row="2" Grid.Column="2"/>
+    </Grid>
 </ContentPage>
