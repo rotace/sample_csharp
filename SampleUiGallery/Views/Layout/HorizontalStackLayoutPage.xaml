@@ -8,5 +8,11 @@
         <Button Text="View Area"/>
         <Button Text="View Area"/>
         <Button Text="View Area"/>
+        <Frame>
+            <Label Text="View Area" VerticalOptions="Center"/>
+        </Frame>
+        <Frame>
+            <Label Text="View Area" VerticalOptions="Center"/>
+        </Frame>
     </HorizontalStackLayout>
 </ContentPage>

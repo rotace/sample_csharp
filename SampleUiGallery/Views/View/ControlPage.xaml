@@ -4,25 +4,49 @@
              x:Class="SampleUiGallery.Views.View.ControlPage"
              Title="ControlPage">
     <HorizontalStackLayout Margin="5" Spacing="5">
-        <VerticalStackLayout  Margin="5" Spacing="5">
+        <VerticalStackLayout  Margin="5" Spacing="5" WidthRequest="200">
+            <Label Text="Label"/>
+            <Image Source="https://aka.ms/campus.jpg"/>
             <Button Text="Button"/>
-            <CheckBox/>
-            <Entry/>
-            <Editor/>
+            <ImageButton Source="https://aka.ms/campus.jpg"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout  Margin="5" Spacing="5">
-            <Switch/>
-            <Slider/>
-            <Stepper/>
-            <RadioButton/>
+            <CheckBox IsChecked="True"/>
+            <Entry Text="Entry"/>
+            <Editor Text="Editor" HeightRequest="100"/>
+            <Switch IsToggled="True"/>
+            <Slider Value="0.5"/>
+            <Stepper Value="20"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout  Margin="5" Spacing="5">
-            <Picker/>
             <DatePicker/>
             <TimePicker/>
+            <Picker x:Name="picker"
+                Title="Select a monkey">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Baboon</x:String>
+                        <x:String>Capuchin Monkey</x:String>
+                        <x:String>Blue Monkey</x:String>
+                        <x:String>Squirrel Monkey</x:String>
+                        <x:String>Golden Lion Tamarin</x:String>
+                        <x:String>Howler Monkey</x:String>
+                        <x:String>Japanese Macaque</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
             <ProgressBar Progress="0.3"/>
+            <ActivityIndicator IsRunning="True"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="5" Spacing="5">
+            <Label Text="What's your favorite animal?" />
+            <RadioButton Content="Cat" />
+            <RadioButton Content="Dog" />
+            <RadioButton Content="Elephant" />
+            <RadioButton Content="Monkey" IsChecked="true" />
         </VerticalStackLayout>
 
     </HorizontalStackLayout>

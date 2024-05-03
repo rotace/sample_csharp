@@ -3,72 +3,237 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleUiGallery.Views.View.ShapePage"
              Title="ShapePage">
-    <Grid
-        Margin="5" RowSpacing="5" ColumnSpacing="5"
-        RowDefinitions="Auto, Auto, Auto, *"
-        ColumnDefinitions="Auto, Auto, Auto, *">
+    <FlexLayout Margin="5"  Wrap="Wrap" JustifyContent="SpaceAround">
+        
         <Rectangle
             Fill="Green"
             Stroke="Red"
             StrokeThickness="3"
-            RadiusX="10"
-            RadiusY="10"
+            RadiusX="5"
+            RadiusY="5"
             WidthRequest="50"
             HeightRequest="50"
-            HorizontalOptions="Start"
-            Grid.Row="0" Grid.Column="0"/>
+            HorizontalOptions="Start"/>
+        
         <RoundRectangle
             Fill="Green"
             Stroke="Red"
             StrokeThickness="3"
-            CornerRadius="20"
+            CornerRadius="40,0,0,40"
             WidthRequest="50"
             HeightRequest="50"
-            HorizontalOptions="Start"
-            Grid.Row="0" Grid.Column="1"/>
-        <Polygon
-            Points="40,10 70,80 10,50"
+            HorizontalOptions="Start"/>
+        
+        <Ellipse
             Fill="Green"
             Stroke="Red"
-            StrokeThickness="5"
-            Grid.Row="0" Grid.Column="2"/>
+            StrokeThickness="3"
+            WidthRequest="70"
+            HeightRequest="50"
+            HorizontalOptions="Start"/>
+        
+        <Path
+            Data="M 10,10 L 50,50 50,25Z"
+            Fill="Green"
+            Stroke="Red"
+            StrokeThickness="3"
+            Aspect="Uniform"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Start"/>
+        
+        <Polygon
+            Points="40,10 70,50 10,50"
+            Fill="Green"
+            Stroke="Red"
+            StrokeThickness="3"
+            HorizontalOptions="Start"/>
+        
+        <Border Stroke="#C49B33"
+            StrokeThickness="4"
+            Background="#2B0B98"
+            Padding="5"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Start">
+            <Border.StrokeShape>
+                <Rectangle/>
+            </Border.StrokeShape>
+            <Label Text=".NET MAUI"
+                TextColor="White"
+                FontSize="10"
+                FontAttributes="Bold" />
+        </Border>
+
+        <Border Stroke="#C49B33"
+            StrokeThickness="4"
+            Background="#2B0B98"
+            Padding="5"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Start">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="40,0,0,40" />
+            </Border.StrokeShape>
+            <Label Text=".NET MAUI"
+                TextColor="White"
+                FontSize="10"
+                FontAttributes="Bold" />
+        </Border>
+
+        <Border Stroke="#C49B33"
+            StrokeThickness="4"
+            Background="#2B0B98"
+            Padding="5"
+            WidthRequest="70"
+            HeightRequest="50"
+            HorizontalOptions="Start">
+            <Border.StrokeShape>
+                <Ellipse/>
+            </Border.StrokeShape>
+            <Label Text=".NET MAUI"
+                TextColor="White"
+                FontSize="10"
+                FontAttributes="Bold" />
+        </Border>
+
+        <Border Stroke="#C49B33"
+            StrokeThickness="4"
+            Background="#2B0B98"
+            Padding="20"
+            HorizontalOptions="Start">
+            <Border.StrokeShape>
+                <Path Data="M 10,10 L 50,50 50,25Z"/>
+            </Border.StrokeShape>
+            <Label Text=".NET"
+                TextColor="White"
+                FontSize="10"
+                FontAttributes="Bold" />
+        </Border>
+
+        <Border Stroke="#C49B33"
+            StrokeThickness="4"
+            Background="#2B0B98"
+            Padding="20"
+            HorizontalOptions="Start">
+            <Border.StrokeShape>
+                <Polygon Points="40,10 70,50 10,50"/>
+            </Border.StrokeShape>
+            <Label Text=".NET"
+                TextColor="White"
+                FontSize="10"
+                FontAttributes="Bold" />
+        </Border>
+
+        <Frame
+            Margin="10"
+            BorderColor="Black"
+            CornerRadius="50"
+            HeightRequest="60"
+            WidthRequest="60"
+            IsClippedToBounds="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Rectangle
+                Fill="Green"
+                Stroke="Red"
+                StrokeThickness="3"
+                RadiusX="5"
+                RadiusY="5"
+                WidthRequest="50"
+                HeightRequest="50"
+                HorizontalOptions="Start"/>
+        </Frame>
+
+        <Frame
+            Margin="10"
+            BorderColor="Black"
+            CornerRadius="50"
+            HeightRequest="60"
+            WidthRequest="60"
+            IsClippedToBounds="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <RoundRectangle
+                Fill="Green"
+                Stroke="Red"
+                StrokeThickness="3"
+                CornerRadius="40,0,0,40"
+                WidthRequest="50"
+                HeightRequest="50"
+                HorizontalOptions="Start"/>
+        </Frame>
+
+        <Frame
+            Margin="10"
+            BorderColor="Black"
+            CornerRadius="50"
+            HeightRequest="60"
+            WidthRequest="60"
+            IsClippedToBounds="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Ellipse
+                Fill="Green"
+                Stroke="Red"
+                StrokeThickness="3"
+                WidthRequest="70"
+                HeightRequest="50"
+                HorizontalOptions="Start"/>
+        </Frame>
+
+        <Frame
+            Margin="10"
+            BorderColor="Black"
+            CornerRadius="50"
+            HeightRequest="60"
+            WidthRequest="60"
+            IsClippedToBounds="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Path
+                Data="M 10,10 L 50,50 50,25Z"
+                Fill="Green"
+                Stroke="Red"
+                StrokeThickness="3"
+                Aspect="Uniform"
+                WidthRequest="50"
+                HeightRequest="50"
+                HorizontalOptions="Start"/>
+        </Frame>
+
+        <Frame
+            Margin="10"
+            BorderColor="Black"
+            CornerRadius="50"
+            HeightRequest="60"
+            WidthRequest="60"
+            IsClippedToBounds="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Polygon
+                Points="40,10 70,50 10,50"
+                Fill="Green"
+                Stroke="Red"
+                StrokeThickness="3"
+                HorizontalOptions="Start"/>
+        </Frame>
+
         <Line
             Stroke="Red"
             X1="40"
             Y1="0"
             X2="0"
-            Y2="120"
-            Grid.Row="1" Grid.Column="0"/>
-        <Path
-            Data="M 10,10 L 50,50 50,25Z"
-            Stroke="Red"
-            Aspect="Uniform"
-            HorizontalOptions="Start"
-            Grid.Row="1" Grid.Column="1"/>
+            Y2="50"
+            HorizontalOptions="Start"/>
+
         <Polyline
             Points="0,0 10,30 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
             Stroke="Red"
-            StrokeThickness="2"
+            StrokeThickness="3"
             StrokeDashArray="1,1"
             StrokeDashOffset="6"
-            Grid.Row="1" Grid.Column="2"/>
-        <Ellipse
-            Fill="Green"
-            WidthRequest="150"
-            HeightRequest="50"
-            HorizontalOptions="Start"
-            Grid.Row="2" Grid.Column="0"/>
-        <Rectangle
-            Fill="Green"
-            Stroke="Red"
-            WidthRequest="50"
-            HeightRequest="50"
-            Grid.Row="2" Grid.Column="1"/>
-        <Rectangle
-            Fill="Green"
-            Stroke="Red"
-            WidthRequest="50"
-            HeightRequest="50"
-            Grid.Row="2" Grid.Column="2"/>
-    </Grid>
+            HorizontalOptions="Start"/>
+
+    </FlexLayout>
 </ContentPage>

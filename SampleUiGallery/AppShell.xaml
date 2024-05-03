@@ -9,7 +9,16 @@
     Shell.FlyoutBehavior="Flyout"
     Title="SampleUiGallery">
 
-    <FlyoutItem Title="Layouts">
+    <FlyoutItem Title="View">
+        <ShellContent
+            Title="Control"
+            ContentTemplate="{DataTemplate view:ControlPage}" />
+        <ShellContent
+            Title="Shape"
+            ContentTemplate="{DataTemplate view:ShapePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Layout">
         <ShellContent
         Title="VerticalStackLayout"
         ContentTemplate="{DataTemplate layout:VerticalStackLayoutPage}" />
@@ -33,12 +42,4 @@
         ContentTemplate="{DataTemplate layout:GridPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="View">
-        <ShellContent
-            Title="Control"
-            ContentTemplate="{DataTemplate view:ControlPage}" />
-        <ShellContent
-            Title="Shape"
-            ContentTemplate="{DataTemplate view:ShapePage}" />
-    </FlyoutItem>
 </Shell>
