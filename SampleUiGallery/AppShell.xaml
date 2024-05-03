@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:SampleUiGallery"
     xmlns:view="clr-namespace:SampleUiGallery.Views.View"
     xmlns:layout="clr-namespace:SampleUiGallery.Views.Layout"
+    xmlns:collect="clr-namespace:SampleUiGallery.Views.Collection"
     Shell.FlyoutBehavior="Flyout"
     Title="SampleUiGallery">
 
@@ -20,26 +21,35 @@
 
     <FlyoutItem Title="Layout">
         <ShellContent
-        Title="VerticalStackLayout"
-        ContentTemplate="{DataTemplate layout:VerticalStackLayoutPage}" />
+            Title="VerticalStackLayout"
+            ContentTemplate="{DataTemplate layout:VerticalStackLayoutPage}" />
         <ShellContent
-        Title="HorizontalStackLayout"
-        ContentTemplate="{DataTemplate layout:HorizontalStackLayoutPage}" />
+            Title="HorizontalStackLayout"
+            ContentTemplate="{DataTemplate layout:HorizontalStackLayoutPage}" />
         <ShellContent
-        Title="StackLayout"
-        ContentTemplate="{DataTemplate layout:StackLayoutPage}" />
+            Title="StackLayout"
+            ContentTemplate="{DataTemplate layout:StackLayoutPage}" />
         <ShellContent
-        Title="AbsoluteLayout"
-        ContentTemplate="{DataTemplate layout:AbsoluteLayoutPage}" />
+            Title="AbsoluteLayout"
+            ContentTemplate="{DataTemplate layout:AbsoluteLayoutPage}" />
         <ShellContent
-        Title="BindableLayout"
-        ContentTemplate="{DataTemplate layout:BindableLayoutPage}" />
+            Title="FlexLayout"
+            ContentTemplate="{DataTemplate layout:FlexLayoutPage}" />
         <ShellContent
-        Title="FlexLayout"
-        ContentTemplate="{DataTemplate layout:FlexLayoutPage}" />
+            Title="Grid"
+            ContentTemplate="{DataTemplate layout:GridPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Collection">
         <ShellContent
-        Title="Grid"
-        ContentTemplate="{DataTemplate layout:GridPage}" />
+            Title="CollectionView"
+            ContentTemplate="{DataTemplate collect:CollectionViewPage}" />
+        <ShellContent
+            Title="CarouselView"
+            ContentTemplate="{DataTemplate collect:CarouselViewPage}" />
+        <ShellContent
+            Title="BindableLayout"
+            ContentTemplate="{DataTemplate collect:BindableLayoutPage}" />
     </FlyoutItem>
 
 </Shell>

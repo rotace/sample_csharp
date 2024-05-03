@@ -1,4 +1,4 @@
-namespace SampleUiGallery.Views.Layout;
+namespace SampleUiGallery.Views.Collection;
 
 public partial class BindableLayoutPage : ContentPage
 {

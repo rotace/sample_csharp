@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:SampleUiGallery.ViewModels"
+             x:Class="SampleUiGallery.Views.Collection.BindableLayoutPage"
+             Title="BindableLayoutPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:CollectionViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout
+        BindableLayout.ItemsSource="{Binding AllItems}">
+        <BindableLayout.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Label Text="{Binding Text}" FontSize="22" />
+                    <Label Text="{Binding Date}" FontSize="14" TextColor="Silver" />
+                </StackLayout>
+            </DataTemplate>
+        </BindableLayout.ItemTemplate>
+    </VerticalStackLayout>
+</ContentPage>
